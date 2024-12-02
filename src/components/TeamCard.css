@@ -1,0 +1,57 @@
+/* Container styles */
+.team-card-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+/* Card styles */
+.team-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image styles */
+.team-card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+}
+
+/* Name and Designation */
+.team-card-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.team-card-designation {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/* Quote styles */
+.team-card-quote {
+    font-size: 14px;
+    font-style: italic;
+    color: #555555;
+}

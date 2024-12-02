@@ -1,0 +1,81 @@
+import './App.css'
+import {Link} from "react-router-dom";
+import {TeamCard} from "./components/TeamCard.jsx";
+
+function App() {
+
+  return (
+      <>
+          {/* Grid Part */}
+          <div id={"bgGrid"}>
+              <div id={"blurGrid"}></div>
+          </div>
+
+
+          {/* ---Hero Section--- */}
+          <section className={"mindshield-main"}>
+                  <div className="mindshield-content">
+                      <h1>Help when u need it, <br/>Hope when u want it</h1><br/>
+                      <p>
+                          A platform dedicated to your safety and mental well-being. Instantly notify loved ones in
+                          emergencies with our SOS feature, reflect through secure journaling, and stay motivated with
+                          uplifting affirmations.
+                      </p><br/>
+
+                      <Link to="/create-account">
+                          <button className="register-button">Register</button>
+                      </Link>
+                  </div>
+
+              <div className="mindshield-image">
+                  {/*<img src="src/assets/img1.jpg" alt="Illustration" width="650" height="auto"/>*/}
+                  <img src="handshake.jpeg" alt="Illustration" width="650" height="330"/>
+
+              </div>
+          </section>
+
+
+          {/* ---Service Section--- */}
+          <section className="services-container" id="services">
+                  <div className="services-content">
+                      <h2>Our services</h2>
+                      <p>We provide to you the best things for you</p>
+                      <div className="service-cards">
+
+                          <div className="service-card1">
+                              <img src="sos.jpg" alt="SOS Alert" width="250" height="250" />
+                              <h3>SOS Alert</h3>
+                              <p>An emergency feature to instantly notify your registered contacts via email or phone in
+                                  critical situations.</p>
+                          </div>
+
+                          <div className="service-card2">
+                              <img src="journalnew.png" alt="Journalling" width="300" height="250"
+                                   className='journalimg'/>
+                              <h3>Journalling</h3>
+                              <p>A secure space to document your daily thoughts and feelings for self-reflection.</p>
+                          </div>
+
+                          <div className="service-card3">
+                              <img src="mental.jpg" alt="Positive Affirmations" width="230" height="250"/>
+                              <h3>Positive Affirmations</h3>
+                              <p>A collection of motivational quotes to inspire positivity and boost your mental
+                                  well-being every day.</p>
+                          </div>
+
+                      </div>
+                  </div>
+          </section>
+
+
+              <section className={"team-container"}>
+                  <h1>Our Team</h1>
+          <TeamCard/>
+              </section>
+
+
+      </>
+  )
+}
+
+export default App

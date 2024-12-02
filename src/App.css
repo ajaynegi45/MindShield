@@ -1,0 +1,279 @@
+#bgGrid {
+  position: fixed;
+  will-change: transform;
+  background-size: 2.5rem 2.5rem;
+  background-image: linear-gradient(90deg,rgba(0,0,0,.133) 1px,transparent 0),linear-gradient(180deg,rgba(5,5,5,.133) 1px,transparent 0);
+  z-index: -2
+
+}
+#bgGrid,#blurGrid {
+  inset: 0;
+  height: 100vh;
+}
+#blurGrid {
+  background:radial-gradient(circle,hsla(0,8%,95%,.6) 0,hsla(0,11%,96%,.97) 90%,var(--background) 100%);
+  z-index:-1;
+}
+@media screen and (max-width: 600px) {
+  #bgGrid {
+    background-size:1.5rem 1.5rem
+  }
+}
+
+
+
+
+
+
+
+
+.mindshield-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.mindshield-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #233348;
+}
+
+.mindshield-nav a {
+  color: #0c0c18;
+  margin: 0 15px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.mindshield-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.mindshield-content {
+  max-width: 500px;
+}
+
+.mindshield-content h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000;
+}
+
+.mindshield-content p {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 32px;
+  color: #7d7987;
+  text-align: justify;
+  padding-right: 30px;
+}
+
+.register-button{
+  height: 45px;
+  width: 150px;
+  background: linear-gradient(to right, #67C3F3, #5A98F2);
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: .6s;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.register-button:hover {
+  /* Glowing effect on hover */
+  box-shadow: 0 0 15px 3px rgb(166, 166, 167); /* blue glow */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.mindshield-image img {
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-container {
+  margin-top: 6rem;
+  position: relative;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  border-radius: 35px;
+}
+
+.bg-element img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.services-content {
+  text-align: center;
+  max-width: 1200px;
+}
+
+.services-content h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  color: #000;
+}
+
+.services-content p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7d7987;
+}
+
+.service-cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.service-cards1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+
+}
+.service-cards2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+
+}
+.service-cards3 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+
+}
+
+.service-card {
+  margin-right: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  background: white;
+  border-radius: 5px;
+  padding: 200px;
+  width: 350px;
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  color: #000;
+}
+
+.service-card p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #7d7987;
+}
+
+.learn-more-button {
+  background-color: #458ff6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 55px;
+  cursor: pointer;
+  margin-top: 90px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.journalimg{
+  padding-left: 51px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.team-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.team-container > h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
