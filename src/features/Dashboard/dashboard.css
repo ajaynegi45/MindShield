@@ -59,3 +59,116 @@
     box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.6);
 }
 
+
+
+
+
+
+
+
+
+
+/* SOS Contact Section */
+.other-sos-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fefcea, #e4e4e4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.emergency-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.other-sos-container h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*.sos-card {*/
+/*    margin-bottom: 1.5rem;*/
+/*    padding: 1rem;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 8px;*/
+/*    background-color: white;*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*    min-width: 200px;*/
+/*    width: 300px;*/
+/*    max-width: 500px;*/
+/*}*/
+
+/*.sos-card:hover {*/
+/*    background-color: #d32f2f;*/
+/*    cursor: pointer;*/
+
+/*}*/
+
+.sos-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.sos-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+
+
+
+/* SOS Card */
+.sos-card {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    width: 300px;
+    max-width: 500px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sos-card:hover {
+    background-color: #ffe6e6;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* Call Link */
+.call-link {
+    color: #d32f2f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.call-link:hover {
+    color: #a31919;
+    text-decoration: underline;
+}
+
+/* Emergency Container */
+.emergency-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+

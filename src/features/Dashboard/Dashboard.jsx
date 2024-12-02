@@ -32,7 +32,6 @@ const Dashboard = () => {
                 <p>Loading...</p>
             )}
 
-
             <section className="shlok-container">
                 <p>Death is certain for one who has been born, and rebirth is inevitable for one who has died. Therefore, you should not lament over the inevitable</p>
             </section>
@@ -43,9 +42,45 @@ const Dashboard = () => {
                 </Link>
             </section>
 
-
             <section className="other-sos-container">
-
+                <h2>Emergency SOS Contacts in India</h2>
+                <div className="emergency-container">
+                    <div className="sos-card">
+                        <h3>Police</h3>
+                        <p>
+                            Contact Number:
+                            <a href="tel:100" className="call-link">100</a>
+                        </p>
+                    </div>
+                    <div className="sos-card">
+                        <h3>Ambulance</h3>
+                        <p>
+                            Contact Number:
+                            <a href="tel:102" className="call-link">102</a>
+                        </p>
+                    </div>
+                    <div className="sos-card">
+                        <h3>Fire Brigade</h3>
+                        <p>
+                            Contact Number:
+                            <a href="tel:101" className="call-link">101</a>
+                        </p>
+                    </div>
+                    <div className="sos-card">
+                        <h3>Women’s Helpline</h3>
+                        <p>
+                            Contact Number:
+                            <a href="tel:1091" className="call-link">1091</a>
+                        </p>
+                    </div>
+                    <div className="sos-card">
+                        <h3>Disaster Management Helpline</h3>
+                        <p>
+                            Contact Number:
+                            <a href="tel:108" className="call-link">108</a>
+                        </p>
+                    </div>
+                </div>
             </section>
         </>
     );

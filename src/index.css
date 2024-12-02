@@ -60,7 +60,7 @@ body {
 }
 
 main{
-  width: 95vw;
+  width: 98vw;
   max-width: 1300px; /* Fixed maximum width */
   height: 100%;
   display: flex;
