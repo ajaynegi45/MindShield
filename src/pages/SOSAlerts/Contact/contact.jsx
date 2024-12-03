@@ -3,6 +3,7 @@ import axios from "axios";
 import "./contact.css";
 import Cookies from "js-cookie";
 import { toast} from "sonner";
+import {useNavigate} from "react-router-dom";
 
 const Contact = () => {
     const [contacts, setContacts] = useState([]);
@@ -10,6 +11,22 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+
+    // Check for user login on component load
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        console.log(userCookie);
+
+        if (userCookie) {
+            const parsedUser = JSON.parse(userCookie); // Parse cookie value
+            setUser(parsedUser); // Set the user data in the state
+        }else {
+            navigate('/login'); // Redirect to login if user is not logged in
+        }
+    }, [navigate]);
+
 
     const userCookie = Cookies.get("user");
     const userId = userCookie ? JSON.parse(userCookie).userId : null;

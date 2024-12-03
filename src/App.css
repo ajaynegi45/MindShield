@@ -180,9 +180,11 @@
 .service-cards{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
+  gap: 2rem;
 
+  margin-top: 1rem;
 }
 
 .service-cards1 {
