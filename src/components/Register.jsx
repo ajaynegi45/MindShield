@@ -84,7 +84,7 @@ const RegisterForm = () => {
                         value={data.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
                         placeholder="Enter your full name"
-                        // required
+                        required
                     />
                 </div>
 

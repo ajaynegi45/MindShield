@@ -28,14 +28,14 @@ const SendAlerts = () => {
 
     // Function to send SOS alert to the backend using Axios
     const sendSOSAlert = (latitude,longitude) => {
-
-        // Replace with actual userId from cookies or context
-        // const userId = "user123";
-
         // Retrieve userId from cookies
         const userCookie = Cookies.get('user');
         const userId = userCookie ? JSON.parse(userCookie).userId : null;
+        const username = userCookie ? JSON.parse(userCookie).name : null;
+
+
         console.log(userId);
+        console.log(username);
 
         toast.promise(
             axios.post(`http://localhost:8081/api/sos/alert`, null, {
@@ -43,6 +43,7 @@ const SendAlerts = () => {
                     userId,
                     latitude,
                     longitude,
+                    username
                 },
             })
                 .then((response) => {

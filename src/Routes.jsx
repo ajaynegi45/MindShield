@@ -4,9 +4,9 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import './index.css';
 import Layout from './Layout.jsx';
 import RegisterForm from "./components/Register.jsx";
-import Contact from "./features/SOSAlerts/Contact/contact.jsx";
-import SendAlerts from "./features/SOSAlerts/SendAlerts/sendAlerts.jsx";
-import Dashboard from "./features/Dashboard/Dashboard.jsx";
+import Contact from "./pages/SOSAlerts/Contact/contact.jsx";
+import SendAlerts from "./pages/SOSAlerts/SendAlerts/sendAlerts.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import Profile from "./pages/Profile.jsx";
 console.log('Routes.jsx');
 

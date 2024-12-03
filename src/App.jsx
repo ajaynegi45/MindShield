@@ -19,8 +19,6 @@ function App() {
             const parsedUser = JSON.parse(userCookie); // Parse cookie value
             setUser(parsedUser); // Set the user data in the state
             navigate('/dashboard'); // Redirect to dashboard if user is logged in
-        } else {
-            navigate('/login'); // Redirect to login if no user is logged in
         }
     }, [navigate]);
 

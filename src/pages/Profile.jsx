@@ -27,6 +27,7 @@ const Profile = () => {
     };
 
     return (
+        <section className="profile">
         <div className="profile-container">
 
             <div className="profile-card">
@@ -45,6 +46,7 @@ const Profile = () => {
             </div>
 
         </div>
+        </section>
     );
 };
 
