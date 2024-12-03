@@ -11,10 +11,10 @@ const SendAlerts = () => {
                 (position) => {
                     const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
-                    const location = `${latitude}, ${longitude}`;
+                    // const location = `${latitude}, ${longitude}`;
 
                     // Function to call the backend to send the alert
-                    sendSOSAlert(location);
+                    sendSOSAlert(latitude, longitude);
                 },
                 (error) => {
                     console.error("Error getting location", error);
@@ -27,7 +27,7 @@ const SendAlerts = () => {
     };
 
     // Function to send SOS alert to the backend using Axios
-    const sendSOSAlert = (location) => {
+    const sendSOSAlert = (latitude,longitude) => {
 
         // Replace with actual userId from cookies or context
         // const userId = "user123";
@@ -38,10 +38,11 @@ const SendAlerts = () => {
         console.log(userId);
 
         toast.promise(
-            axios.post(`http://localhost:8080/api/sos/alert`, null, {
+            axios.post(`http://localhost:8081/api/sos/alert`, null, {
                 params: {
                     userId,
-                    location,
+                    latitude,
+                    longitude,
                 },
             })
                 .then((response) => {

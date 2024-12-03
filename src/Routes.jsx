@@ -7,6 +7,7 @@ import RegisterForm from "./components/Register.jsx";
 import Contact from "./features/SOSAlerts/Contact/contact.jsx";
 import SendAlerts from "./features/SOSAlerts/SendAlerts/sendAlerts.jsx";
 import Dashboard from "./features/Dashboard/Dashboard.jsx";
+import Profile from "./pages/Profile.jsx";
 console.log('Routes.jsx');
 
 // Lazy load components
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
             <Route path="/contact" element={<Contact /> }/>
             <Route path="/sos-alert" element={<SendAlerts /> }/>
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
         </Route>
 
     )

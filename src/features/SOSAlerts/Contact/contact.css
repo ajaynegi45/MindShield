@@ -1,81 +1,174 @@
-/* contact.css */
-
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f9;
-}
-
-/* Container for the contact form */
+/* Container */
 .contact-container {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 600px;
+    min-width: 500px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
 }
 
-/* Form styling */
-.contact-form {
+.contact-container > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-container > .subtitle {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-/* Input field styling */
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.contact-detail {
+    font-size: 14px;
+    color: #666666;
+    margin: 3px 0;
+}
+
+.delete-btn {
+    background: #f9f9f9;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #e60000;
+}
+
+/* Add Contact Button */
+.add-contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-contact-btn:hover {
+    background: #005cbf;
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
 .input-group {
     margin-bottom: 15px;
 }
 
-.input-group label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-}
-
-.input-group input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
+.input-field {
     width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
     box-sizing: border-box;
 }
 
-.input-group input:focus {
-    border-color: #007bff;
-    outline: none;
+.input-field:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
 }
 
-/* Submit button styling */
-.submit-btn {
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+    flex: 1;
     padding: 10px;
-    background-color: #28a745;
-    color: white;
     font-size: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
-.submit-btn:hover {
-    background-color: #218838;
+.save-btn {
+    background: #1e90ff;
+    color: white;
 }
 
-/* Toast notifications position */
-.toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+.save-btn:hover {
+    background: #005cbf;
+}
+
+.cancel-btn {
+    background: #f5f5f5;
+    color: #333333;
+}
+
+.cancel-btn:hover {
+    background: #dddddd;
 }

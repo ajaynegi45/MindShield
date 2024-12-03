@@ -62,6 +62,7 @@ const RegisterForm = () => {
 
         // Call the register service and handle response
         register(data).then(() => {
+            toast.success("Register Successfully");
             navigate("/login");
         }).catch((err) => {
             console.error("Error during registration: ", err);

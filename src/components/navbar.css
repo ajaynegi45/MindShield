@@ -80,3 +80,25 @@
     }
 }
 
+
+.login-user-feature-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.login-user-feature-container > .link{
+    padding: 11px 15px;
+    transition: .6s;
+}
+
+.login-user-feature-container > .link:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #67C3F3, #5A98F2);
+    border-radius: 5px;
+
+    /*transform: scale(1.05);*/
+}
+

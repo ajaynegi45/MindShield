@@ -1,8 +1,28 @@
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css'
 import {Link} from "react-router-dom";
 import {TeamCard} from "./components/TeamCard.jsx";
+import Cookies from "js-cookie";
 
 function App() {
+
+    const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+
+    // Check for user login on component load
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        console.log(userCookie);
+
+        if (userCookie) {
+            const parsedUser = JSON.parse(userCookie); // Parse cookie value
+            setUser(parsedUser); // Set the user data in the state
+            navigate('/dashboard'); // Redirect to dashboard if user is logged in
+        } else {
+            navigate('/login'); // Redirect to login if no user is logged in
+        }
+    }, [navigate]);
 
   return (
       <>

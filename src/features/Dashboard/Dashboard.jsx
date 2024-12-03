@@ -17,10 +17,7 @@ const Dashboard = () => {
         }
     }, [navigate]);
 
-    const handleLogout = () => {
-        Cookies.remove('user'); // Remove the user cookie
-        navigate('/'); // Redirect to the homepage
-    };
+
 
     return (
         <>
