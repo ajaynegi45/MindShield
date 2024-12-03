@@ -7,7 +7,7 @@ export function TeamCard() {
                 "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
             name: "Harinee",
             designation: "Developer",
-            src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop",
+            src: "harinee_profile.jpg",
         },
         {
             quote:
