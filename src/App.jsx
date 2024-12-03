@@ -85,6 +85,21 @@ function App() {
                   </div>
           </section>
 
+          {/* ---Upcoming Chat Feature Section--- */}
+          <section className="chat-feature-container" id="chat-feature">
+              <div className="chat-feature-content">
+                  <h2>Upcoming Chat Feature</h2>
+                  <p>
+                      Share your thoughts and problems with others to feel lighter and more relaxed.
+                      Our upcoming chat feature is designed to help you connect, share, and support each other in times of need.
+                      Stay tuned for updates!
+                  </p>
+                  <div className="chat-feature-image">
+                      <img src="chat.svg" alt="Chat Feature" width="600" height="350" />
+                  </div>
+              </div>
+          </section>
+
 
               <section className={"team-container"}>
                   <h1>Our Team</h1>
