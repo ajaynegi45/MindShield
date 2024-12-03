@@ -40,7 +40,7 @@ function App() {
                           uplifting affirmations.
                       </p><br/>
 
-                      <Link to="/create-account">
+                      <Link to="/register">
                           <button className="register-button">Register</button>
                       </Link>
                   </div>

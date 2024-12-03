@@ -74,7 +74,7 @@ const LoginForm = () => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="eg@example.com"
+                        placeholder="Enter your email"
                         value={data.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         onFocus={() => handleFocus('email')}

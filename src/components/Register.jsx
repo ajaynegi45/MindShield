@@ -96,8 +96,8 @@ const RegisterForm = () => {
                         name="email"
                         value={data.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        placeholder="eg@example.com"
-                        // required
+                        placeholder="Enter your email"
+                        required
                     />
                 </div>
 
@@ -110,7 +110,7 @@ const RegisterForm = () => {
                         value={data.password}
                         onChange={(e) => handleInputChange('password', e.target.value)}
                         placeholder="Enter your password"
-                        // required
+                        required
                     />
                 </div>
 
@@ -123,7 +123,7 @@ const RegisterForm = () => {
                         value={data.confirmPassword}
                         onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
                         placeholder="Re-enter your password"
-                        // required
+                        required
                     />
                 </div>
 
