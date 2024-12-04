@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import './dashboard.css';
+import axios from "axios";
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
+    const [shlok, setShlok] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,7 +19,18 @@ const Dashboard = () => {
         }
     }, [navigate]);
 
-
+    useEffect(() => {
+        const fetchShlok = async () => {
+            const API_URL = `http://localhost:8083/api/v1/shloks/get-random-shlok`;
+            try {
+                const response = await axios.get(API_URL);
+                setShlok(response.data);
+            } catch (error) {
+                console.error("Error fetching the shlok:", error);
+            }
+        };
+        fetchShlok();
+    }, []);  // This effect runs only once, after the initial render
 
     return (
         <>
@@ -30,7 +43,14 @@ const Dashboard = () => {
             )}
 
             <section className="shlok-container">
-                <p>Death is certain for one who has been born, and rebirth is inevitable for one who has died. Therefore, you should not lament over the inevitable</p>
+                {/* Only render the Shlok content if it is available */}
+                {shlok ? (
+                    <Link to={`/shlok/${shlok.id}`} >
+                    <p>{shlok.englishShlok}</p>
+                    </Link>
+                ) : (
+                    <p>A person who remains unaffected by the material world, and is undisturbed by pain and pleasure, is a true yogi.</p>
+                )}
             </section>
 
             <section className="sos-container">

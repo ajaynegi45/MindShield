@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './index.css';
+import Slok from "./components/slok.jsx";
 
 // Lazy load the components
 const Layout = lazy(() => import('./Layout.jsx'));
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
             <Route path="/profile" element={<Profile />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:journalId" element={<SingleJournal />} /> {/* Dynamic route for single journal */}
+            <Route path="/shlok/:shlokId" element={<Slok />} />
         </Route>
     )
 );

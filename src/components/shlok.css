@@ -1,0 +1,88 @@
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Shlok Container */
+.single-shlok-container {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.shlok-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3e3e3e;
+    margin-bottom: 40px;
+}
+
+/* Shlok Content Styling */
+.shlok-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shlok-box,
+.translation-box,
+.meaning-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.shlok-box h2,
+.translation-box h2,
+.meaning-box h2 {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.sanskrit-text,
+.english-text,
+.hindi-meaning,
+.english-meaning {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Sanskrit text styling */
+.sanskrit-text {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #d04f4f;
+    margin: 10px 0;
+}
+
+/* English Translation */
+.english-text {
+    font-style: italic;
+}
+
+/* Meanings */
+.hindi-meaning,
+.english-meaning {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #444;
+}
+
+.meaning-box {
+    background-color: #fafafa;
+}
+
+/* Loading Spinner */
+.loading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 50px;
+}

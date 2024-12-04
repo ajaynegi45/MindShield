@@ -3,12 +3,12 @@ import "./JournalEditor.css";
 import { createJournal } from "../../services/JournalService";
 
 const JournalEditor = () => {
-    const [title, setTitle] = useState("");  // State for title
-    const [content, setContent] = useState("");  // State for content
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
 
     const handlePublish = async () => {
         try {
-            await createJournal(title, content);  // Send title and content to backend
+            await createJournal(title, content);
             alert("Journal saved!");
         } catch (error) {
             console.error("Error saving journal:", error);

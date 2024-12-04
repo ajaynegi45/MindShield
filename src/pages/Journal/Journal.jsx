@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getJournals } from "../../services/JournalService";  // Assuming you're using this API function to fetch journals
+import { getJournals } from "../../services/JournalService";
 import JournalCard from "./JournalCard.jsx";
 import JournalEditor from "./JournalEditor.jsx";
 import "./Journal.css"
@@ -14,12 +14,15 @@ const Journal = () => {
             const data = await getJournals();
             setJournals(data);
         };
-
         fetchJournals();
     }, []);
 
     return (
         <>
+
+            <h1>Journals</h1>
+
+
             {/* Journal Editor to write a new journal */}
             <JournalEditor />
 
