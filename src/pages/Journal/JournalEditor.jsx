@@ -1,18 +1,26 @@
 import { useState } from "react";
 import "./JournalEditor.css";
 import { createJournal } from "../../services/JournalService";
+import { toast } from "sonner";
 
-const JournalEditor = () => {
+const JournalEditor = ({ closePopup }) => {  // Accept closePopup function as prop
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
     const handlePublish = async () => {
         try {
-            await createJournal(title, content);
-            alert("Journal saved!");
+            if (!title) {
+                toast.error("Please enter journal title");
+            } else if (!content) {
+                toast.error("Please enter journal content");
+            } else {
+                await createJournal(title, content);
+                toast.success("Journal created successfully.");
+                closePopup(); // Close the popup after journal is published
+            }
         } catch (error) {
             console.error("Error saving journal:", error);
-            alert("Failed to save journal.");
+            toast.error("Error saving journal:", error);
         }
     };
 
@@ -20,7 +28,7 @@ const JournalEditor = () => {
         <div className="editor-container">
             <div className="editor-header">
                 <button className="add-button">
-                    <i className="icon-image" /> Add Cover
+                    <i className="icon-image"/> Add Cover
                 </button>
             </div>
             <div className="editor-body">

@@ -135,12 +135,12 @@ const Contact = () => {
             </div>
 
             {/* Add More Contact Button */}
-            <button className="add-contact-btn" onClick={() => setShowPopup(true)}>
-                Add More Contact
-            </button>
+                <button className="add-contact-btn" onClick={() => setShowPopup(true)}>
+            Add More Contact
+        </button>
 
-            {/* Popup Form */}
-            {showPopup && (
+    {/* Popup Form */}
+    {showPopup && (
                 <div className="popup-overlay">
                     <div className="popup-form">
                         <h3 className="form-title">Add Emergency Contact</h3>
