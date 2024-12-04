@@ -2,41 +2,39 @@ import { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './index.css';
-import Layout from './Layout.jsx';
-import RegisterForm from "./components/Register.jsx";
-import Contact from "./pages/SOSAlerts/Contact/contact.jsx";
-import SendAlerts from "./pages/SOSAlerts/SendAlerts/sendAlerts.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
-import Profile from "./pages/Profile.jsx";
-console.log('Routes.jsx');
 
-// Lazy load components
+// Lazy load the components
+const Layout = lazy(() => import('./Layout.jsx'));
+const RegisterForm = lazy(() => import("./components/Register.jsx"));
+const Contact = lazy(() => import("./pages/SOSAlerts/Contact/contact.jsx"));
+const SendAlerts = lazy(() => import("./pages/SOSAlerts/SendAlerts/sendAlerts.jsx"));
+const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
+const Profile = lazy(() => import("./pages/Profile.jsx"));
+const Journal = lazy(() => import("./pages/Journal/Journal.jsx"));
+const SingleJournal = lazy(() => import("./pages/Journal/SingleJournal.jsx"));
 const App = lazy(() => import('./App.jsx'));
 const ErrorPage = lazy(() => import('./components/ErrorPage.jsx'));
 const Login = lazy(() => import("./components/Login.jsx"));
 
-
-// Create routes
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route index element={<App />} />
             <Route path="*" element={<ErrorPage />} />
-
             <Route path="/register" element={<RegisterForm />} />
-            <Route path="/login" element={<Login/>} />
-            <Route path="/contact" element={<Contact /> }/>
-            <Route path="/sos-alert" element={<SendAlerts /> }/>
+            <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sos-alert" element={<SendAlerts />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/:journalId" element={<SingleJournal />} /> {/* Dynamic route for single journal */}
         </Route>
-
     )
 );
 
-// Render the app with Suspense
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <Suspense fallback={<div className="loading"> <img src="/loading.svg" alt="loading..." /> </div>}>
+    <Suspense fallback={<div className="loading"><img src="/loading.svg" alt="loading..." /></div>}>
         <RouterProvider router={router} />
     </Suspense>
 );

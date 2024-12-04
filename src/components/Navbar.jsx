@@ -35,7 +35,7 @@ const Navbar = () => {
                             <Link to="/contact" className="link">
                                 Contacts
                             </Link>
-                            <Link to="/profile" className="link">
+                            <Link to="/journal" className="link">
                                 Journal
                             </Link>
                             <Link to="/profile" className="link">

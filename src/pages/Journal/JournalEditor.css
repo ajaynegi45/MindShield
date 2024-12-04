@@ -1,0 +1,99 @@
+
+.editor-container {
+    min-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Header Buttons */
+.editor-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background: #f4f4f4;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-button:hover {
+    background: #e6e6e6;
+}
+
+/* Editable Title and Body */
+.journal-title,
+.journal-body {
+    outline: none;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: inherit;
+    background: #f9f9f9;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Placeholder Handling */
+.journal-title::before,
+.journal-body::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #aaa;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.journal-title.filled::before,
+.journal-body.filled::before {
+    content: "";
+}
+
+.journal-title {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.journal-body {
+    min-height: 200px;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Publish Button */
+.publish-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.publish-button:hover {
+    background-color: #0056b3;
+}
