@@ -51,7 +51,7 @@ const LoginForm = () => {
                     };
                     Cookies.set('user', JSON.stringify(user), { expires: 7, secure: true });
                     toast.success('User logged in successfully');
-                    navigate('/dashboard');
+                    navigate('/contact');
                 })
                 .catch((err) => {
                     console.error('Error during login:', err);
