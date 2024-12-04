@@ -20,7 +20,8 @@ const Journal = () => {
 
     return (
         <>
-            <h1>All your Journals</h1>
+            <h2 className={"journal-hero-title journal-hero-title-start"}>Where every story begins — capture your thoughts,</h2>
+            <h2 className={"journal-hero-title"} >spark your creativity, and document your journey.</h2>
 
             <section>
                 {/* Add More Contact Button */}
