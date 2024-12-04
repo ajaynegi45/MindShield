@@ -26,7 +26,7 @@ export function TeamCard() {
         {
             quote:
                 "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-            name: "",
+            name: "Sailaja",
             designation: "Developer",
             src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop",
         },
