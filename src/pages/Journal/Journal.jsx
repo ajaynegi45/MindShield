@@ -4,7 +4,6 @@ import { getJournals } from "../../services/JournalService";
 import JournalCard from "./JournalCard.jsx";
 import JournalEditor from "./JournalEditor.jsx";
 import "./Journal.css";
-
 const Journal = () => {
     const [journals, setJournals] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
@@ -17,6 +16,8 @@ const Journal = () => {
         };
         fetchJournals();
     }, []);
+
+    console.log( "This is journals getting from Frontend" , journals)
 
     return (
         <>
@@ -44,7 +45,7 @@ const Journal = () => {
             <div id="journal-list-container">
                 {journals.map((journal) => (
                     <Link key={journal.id} to={`/journal/${journal.id}`} className="journal-link">
-                        <JournalCard
+                        <JournalCard className="journal-card-item"
                             journalbanner={journal.journalbanner}
                             journaltitle={journal.title}
                             journalbody={journal.content}

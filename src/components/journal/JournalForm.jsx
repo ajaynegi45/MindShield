@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+import {ConfettiSideCannons} from "../ConfettiSideCannons.jsx";
 
 const JournalForm = ({ onAddJournal, onEditJournal, editJournal }) => {
   const [error, setError] = useState(""); // New state for handling error messages

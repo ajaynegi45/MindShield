@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './index.css';
 import Slok from "./components/slok.jsx";
+import EditProfile from "./pages/EditProfile.jsx";
 
 // Lazy load the components
 const Layout = lazy(() => import('./Layout.jsx'));
@@ -28,9 +29,12 @@ const router = createBrowserRouter(
             <Route path="/sos-alert" element={<SendAlerts />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path={"/edit-profile"} element={<EditProfile />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:journalId" element={<SingleJournal />} /> {/* Dynamic route for single journal */}
             <Route path="/shlok/:shlokId" element={<Slok />} />
+
+
         </Route>
     )
 );

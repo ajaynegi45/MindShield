@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./JournalEditor.css";
 import { createJournal } from "../../services/JournalService";
 import { toast } from "sonner";
+import confetti from "canvas-confetti";
 
-const JournalEditor = ({ closePopup }) => {  // Accept closePopup function as prop
+
+const JournalEditor = ({ closePopup }) => { // Accept closePopup function as prop
+
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
@@ -15,6 +18,7 @@ const JournalEditor = ({ closePopup }) => {  // Accept closePopup function as pr
                 toast.error("Please enter journal content");
             } else {
                 await createJournal(title, content);
+                handleClick();
                 toast.success("Journal created successfully.");
                 closePopup(); // Close the popup after journal is published
             }
@@ -24,6 +28,37 @@ const JournalEditor = ({ closePopup }) => {  // Accept closePopup function as pr
         }
     };
 
+
+
+    const handleClick = () => {
+        const end = Date.now() + 10; // 3 seconds
+        const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+
+        const frame = () => {
+            if (Date.now() > end) return;
+
+            confetti({
+                particleCount: 100,
+                angle: 60,
+                spread: 99,
+                startVelocity: 60,
+                origin: { x: 0, y: 0.5 },
+                colors: colors,
+            });
+            confetti({
+                particleCount: 100,
+                angle: 120,
+                spread: 99,
+                startVelocity: 60,
+                origin: { x: 1, y: 0.5 },
+                colors: colors,
+            });
+
+            requestAnimationFrame(frame);
+        };
+
+        frame();
+    };
     return (
         <div className="editor-container">
             <div className="editor-header">

@@ -28,24 +28,31 @@ const Profile = () => {
 
     return (
         <section className="profile">
-        <div className="profile-container">
+            <div className="profile-container">
 
-            <div className="profile-card">
-                <h1>Your Profile</h1>
-                <img
-                    src={image}
-                    alt="Profile"
-                    className="profile-image"
-                />
-                <h1 className="profile-name">{user.name}</h1>
-                <p className="profile-email">{user.email}</p>
+                <div className="profile-card">
+                    <h1>Your Profile</h1>
+                    <img
+                        src={image}
+                        alt="Profile"
+                        className="profile-image"
+                    />
+                    <h1 className="profile-name">{user.name}</h1>
+                    <p className="profile-email">{user.email}</p>
 
-                <div>
-                    <button className={"logout-button"} onClick={handleLogout}>Logout</button>
+
+                    <div>
+                        <button className="logout-button" onClick={() => navigate('/edit-profile')}>
+                            Edit Profile
+                        </button>
+                    </div>
+
+                    <div>
+                        <button className={"logout-button"} onClick={handleLogout}>Logout</button>
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
         </section>
     );
 };

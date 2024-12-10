@@ -1,8 +1,8 @@
 #journal-card-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    height: 400px;
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -46,9 +46,21 @@
     line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     #journal-card-container {
-        width: 100%;
-        max-width: 100%;
+        width: 300px;
     }
 }
+
+@media (max-width: 600px) {
+    #journal-card-container {
+        min-width: 300px;
+        width: 100%;
+        height: 350px;
+        margin: 10px 0 10px 0;
+
+
+    }
+}
+
+
