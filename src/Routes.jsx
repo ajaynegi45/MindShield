@@ -30,7 +30,7 @@ const router = createBrowserRouter(
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
             <Route path={"/edit-profile"} element={<EditProfile />} />
-            <Route path="/journal" element={<Journal />} />
+            <Route path="/journals" element={<Journal />} />
             <Route path="/journal/:journalId" element={<SingleJournal />} /> {/* Dynamic route for single journal */}
             <Route path="/shlok/:shlokId" element={<Slok />} />
 

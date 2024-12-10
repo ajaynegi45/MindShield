@@ -17,8 +17,6 @@ const Journal = () => {
         fetchJournals();
     }, []);
 
-    console.log( "This is journals getting from Frontend" , journals)
-
     return (
         <>
             <h2 className={"journal-hero-title journal-hero-title-start"}>Where every story begins — capture your thoughts,</h2>

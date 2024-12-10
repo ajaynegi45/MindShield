@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getJournals } from "../../services/JournalService.jsx"; // Assuming this function fetches the journal data by id
+import { getJournals, deleteJournal } from "../../services/JournalService.jsx"; // Assuming this function fetches the journal data by id
 import './SingleJournal.css';
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
+
 
 const SingleJournal = () => {
     const { journalId } = useParams();
     const [journal, setJournal] = useState(null);
+    const navigate=useNavigate();
+
 
     useEffect(() => {
         const fetchJournal = async () => {
@@ -32,6 +36,11 @@ const SingleJournal = () => {
         return date.toLocaleDateString('en-US', options);
     };
 
+    const deleteThisJournal = async () => {
+        const journals = await deleteJournal(journalId);
+        navigate('/journals');
+    };
+
     return (
         <section id="singleJournal">
             <div className="singleJournal-banner-image-container">
@@ -52,8 +61,14 @@ const SingleJournal = () => {
                 <span className="dot-separator">·</span>
                 <p>{formatDate(journal.createdAt)}</p>
             </div>
+
             <div className="singleJournal-content-container">
                 <p>{journal.content}</p>
+            </div>
+
+            <div className="singleJournal-options-container">
+                <button className="singleJournal-button" onClick={deleteThisJournal}>Delete</button>
+                <button className="singleJournal-button">Update</button>
             </div>
         </section>
     );
