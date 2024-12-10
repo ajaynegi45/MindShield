@@ -4,6 +4,7 @@ import { getJournals, deleteJournal } from "../../services/JournalService.jsx"; 
 import './SingleJournal.css';
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import {toast} from "sonner";
 
 
 const SingleJournal = () => {
@@ -38,6 +39,7 @@ const SingleJournal = () => {
 
     const deleteThisJournal = async () => {
         const journals = await deleteJournal(journalId);
+        toast.success(journals);
         navigate('/journals');
     };
 
