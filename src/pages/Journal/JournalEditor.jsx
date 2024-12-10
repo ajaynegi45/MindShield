@@ -4,9 +4,7 @@ import { createJournal } from "../../services/JournalService";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 
-
 const JournalEditor = ({ closePopup }) => { // Accept closePopup function as prop
-
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
@@ -17,7 +15,7 @@ const JournalEditor = ({ closePopup }) => { // Accept closePopup function as pro
             } else if (!content) {
                 toast.error("Please enter journal content");
             } else {
-                await createJournal(title, content);
+                await createJournal(title, content); // Send content as-is (with whitespace preserved)
                 handleClick();
                 toast.success("Journal created successfully.");
                 closePopup(); // Close the popup after journal is published
@@ -27,8 +25,6 @@ const JournalEditor = ({ closePopup }) => { // Accept closePopup function as pro
             toast.error("Error saving journal:", error);
         }
     };
-
-
 
     const handleClick = () => {
         const end = Date.now() + 10; // 3 seconds
@@ -59,6 +55,7 @@ const JournalEditor = ({ closePopup }) => { // Accept closePopup function as pro
 
         frame();
     };
+
     return (
         <div className="editor-container">
             <div className="editor-header">
@@ -71,7 +68,7 @@ const JournalEditor = ({ closePopup }) => { // Accept closePopup function as pro
                 <div
                     className={`journal-title ${title ? "filled" : ""}`}
                     contentEditable="true"
-                    onInput={(e) => setTitle(e.target.innerText)}
+                    onInput={(e) => setTitle(e.target.innerText)} // Store title as it is, including whitespaces
                     data-placeholder="Journal Title..."
                 ></div>
 
@@ -79,7 +76,7 @@ const JournalEditor = ({ closePopup }) => { // Accept closePopup function as pro
                 <div
                     className={`journal-body ${content ? "filled" : ""}`}
                     contentEditable="true"
-                    onInput={(e) => setContent(e.target.innerText)}
+                    onInput={(e) => setContent(e.target.innerText)} // Store content as it is, including whitespaces
                     data-placeholder="Start writing your journal..."
                 ></div>
             </div>

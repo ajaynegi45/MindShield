@@ -54,6 +54,12 @@
     overflow: auto; /* Enable scrolling if content overflows */
 }
 
+.journal-body {
+    white-space: pre-wrap; /* Preserves whitespace */
+    word-wrap: break-word; /* Allows word break to prevent overflow */
+}
+
+
 /* Scrollable Title Area */
 .journal-title {
     font-size: 24px;
