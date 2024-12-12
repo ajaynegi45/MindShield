@@ -1,0 +1,29 @@
+.emergency-card{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 1px solid #EFEFEF;
+    border-radius: 103.17px;
+    padding: 0.75rem 1.5em 0.75rem 0.75rem;
+}
+.emergency-card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.emergency-card-image > img {
+    height: 1.5rem;
+    width: auto;
+}
+
+.emergency-card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emergency-card-content{
+    font-size: 1.5rem;
+}
