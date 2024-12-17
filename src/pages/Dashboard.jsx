@@ -4,15 +4,12 @@ import Cookies from 'js-cookie';
 import './dashboard.css';
 import axios from "axios";
 import EmergencyCard from "../components/EmergencyCard.jsx";
-import Medical from "/public/Medical.svg";
-import Fire from "/public/Fire.svg";
-import Accident from "/public/Accident.svg";
-import Disaster from "/public/Disaster.svg";
-import Violence from "/public/Violence.svg";
-import Rescue from "/public/Rescue.svg";
-
-
-
+import Medical from "/Medical.svg";
+import Fire from "/Fire.svg";
+import Accident from "/Accident.svg";
+import Disaster from "/Disaster.svg";
+import Violence from "/Violence.svg";
+import Rescue from "/Rescue.svg";
 
 
 const Dashboard = () => {
@@ -129,7 +126,7 @@ const Dashboard = () => {
                         <Link to={"/contact"}>Emergency Contacts</Link>
                     </div>
                     <div className="dashboard-right-container">
-                        <img src={"/public/kidnaping.svg"} alt="Kinapping Image"/>
+                        <img src={"/kidnaping.svg"} alt="Kinapping Image"/>
                     </div>
                 </div>
 
@@ -159,7 +156,6 @@ const Dashboard = () => {
                         <EmergencyCard image={Violence} name={"Violence"} color={"#F5A6DF"}/>
                         <EmergencyCard image={Rescue} name={"Rescue"} color={"#F5E8A6"}/>
                     </div>
-
                 </div>
 
             </section>

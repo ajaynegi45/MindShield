@@ -4,33 +4,27 @@ export function TeamCard() {
     const teamMembers = [
         {
             quote:
-                "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+                "Accomplished the development of the Journal feature backend, ensuring seamless data management and retrieval.",
             name: "Harinee",
-            designation: "Developer",
+            designation: "Java Developer",
             src: "harinee_profile.jpg",
         },
         {
             quote:
-                "Built a robust authentication system and real-time SOS alerts backend, seamlessly integrated with the frontend for a flawless user experience.",
+                "Successfully built and integrated the frontend and backend systems for Authentication, SOS Alerts, and Journal features, optimizing real-time user interactions and security protocols.",
             name: "Ajay Negi",
-            designation: "Developer",
+            designation: "Software Engineer",
             src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop",
         },
         {
             quote:
-                "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+                "Designed the frontend part, streamlining the user experience and enabling intuitive interaction.",
             name: "Yash Raj",
-            designation: "Developer",
+            designation: "Java Developer",
             src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop",
         },
-        {
-            quote:
-                "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-            name: "Sailaja",
-            designation: "Developer",
-            src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop",
-        },
     ];
+
 
     return (
         <div className="team-card-container">

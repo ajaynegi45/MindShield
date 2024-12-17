@@ -1,7 +1,8 @@
-import { toast } from "sonner";
+import {toast} from "sonner";
 import axios from "axios";
 import "./SendAlerts.css";
 import Cookies from 'js-cookie';
+import {Link} from "react-router-dom";
 
 const SendAlerts = () => {
     // Function to handle getting user's location
@@ -27,7 +28,7 @@ const SendAlerts = () => {
     };
 
     // Function to send SOS alert to the backend using Axios
-    const sendSOSAlert = (latitude,longitude) => {
+    const sendSOSAlert = (latitude, longitude) => {
         // Retrieve userId from cookies
         const userCookie = Cookies.get('user');
         const userId = userCookie ? JSON.parse(userCookie).userId : null;
@@ -67,14 +68,14 @@ const SendAlerts = () => {
     };
 
     return (
-        <>
-            <div className="sendAlerts">
+        <section className="sos-alert-container">
+            <div className="sos-button-container">
                 <h1>Send SOS Alert to saved contacts</h1>
-                <button onClick={getLocationAndSendAlert} className="sos-button">
-                    Tap to send Alert
-                </button>
+                <Link to="/sos-alert">
+                    <button onClick={getLocationAndSendAlert} className="sos-alert-button">SOS ALERT</button>
+                </Link>
             </div>
-        </>
+        </section>
     );
 };
 

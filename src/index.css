@@ -84,6 +84,22 @@ body {
 }
 
 
+.line-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.line-div > div {
+  width: 500px;
+  border-bottom: 3px solid var(--slate-black);
+  border-radius: 5px;
+
+}
+
 
 
 /*body {*/

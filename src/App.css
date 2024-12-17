@@ -1,27 +1,68 @@
-#bgGrid {
-  position: fixed;
-  will-change: transform;
-  background-size: 2.5rem 2.5rem;
-  background-image: linear-gradient(90deg,rgba(0,0,0,.133) 1px,transparent 0),linear-gradient(180deg,rgba(5,5,5,.133) 1px,transparent 0);
-  z-index: -2
-
-}
-#bgGrid,#blurGrid {
-  inset: 0;
-  height: 100vh;
-}
-#blurGrid {
-  background:radial-gradient(circle,hsla(0,8%,95%,.6) 0,hsla(0,11%,96%,.97) 90%,var(--background) 100%);
-  z-index:-1;
-}
-@media screen and (max-width: 600px) {
-  #bgGrid {
-    background-size:1.5rem 1.5rem
-  }
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
+#home-hero-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
 
+.left-home-hero-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.left-home-hero-container > h1 {
+  font-size: 3rem;
+  color: #FF8852;
+}
+.left-home-hero-container > p {
+  font-size: 1.5rem;
+}
+.left-home-hero-container > p > span{
+  display: inline-block;
+  transform: rotate(-180deg);
+  padding-top: 10px;
+}
 
+.left-home-hero-container > div > button {
+  padding: 0.8rem 3rem;
+  color: #F5F5FA;
+  background: linear-gradient( #FFAD59 0%, #FF7E7B 80%);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem auto;
+}
+.left-home-hero-container > div > button:hover {
+  background: #FF8852;
+  cursor: pointer;
+}
+.right-home-hero-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.right-home-hero-container > img {
+  width: 14rem;
+}
+.right-home-hero-container > img:nth-of-type(2) {
+  width: 14rem;
+  margin-bottom: 5rem;
+}
 
 
 
@@ -140,7 +181,6 @@
 
 
 .services-container {
-  margin-top: 6rem;
   position: relative;
   padding: 50px;
   display: flex;
@@ -335,7 +375,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .team-container > h1 {
